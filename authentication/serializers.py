@@ -26,7 +26,7 @@ class RegisterSerializer(serializers.ModelSerializer):
 
 class LoginSerializer(serializers.ModelSerializer):
 
-    phone = serializers.CharField(max_length=12,min_length=4)
+    phone = serializers.CharField(max_length=12,min_length=3)
     password = serializers.CharField(max_length=112,min_length=2,write_only=True)
     name = serializers.CharField(max_length=225,min_length=3,read_only=True)
     tokens = serializers.CharField(max_length=225,min_length=3,read_only=True)

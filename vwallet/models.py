@@ -18,7 +18,7 @@ class Pocket(models.Model):
         max_length=10,choices=options,default='available')
     
     user = models.ForeignKey(
-        to = User ,related_name='pockets',on_delete=models.CASCADE,default=1
+        to = User ,related_name='pockets',on_delete=models.CASCADE
     )
     objects = models.Manager()
     pocketobjects = PocketObjects()
